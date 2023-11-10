@@ -1,0 +1,27 @@
+2.	Implement the following classes in separate files (with header and cpp – file name should be the same as the class name)
+•	 abstract class Shape which has:
+o	A constructor that receives a position (vector3)
+o	A deleted default constructor
+o	A pure virtual function called Grow() – increases the size with 10%
+o	A pure virtual function called Shrink() – decreases the size with 10%
+o	A pure virtual function dalled PrintInfo() – displays the position and every other class member
+o	A pure virtual function called GetArea() – displays the area of the shape
+o	A function called MoveRandomly() – which increments / decrements any of the axes randomly
+•	class Rectangle that extends class Shape:
+o	a constructor that receives length, width and pos
+o	implements every pure virtual function
+•	class Circle that extends class Shape:
+o	a constructor with radius and pos
+•	class Square that extends class Rectangle
+o	a constructor with length and pos
+•	class Rombus (made from 2 equilateral triangles) that extends class Square
+o	a constructor with length and pos
+Generate a list of 10 random shapes and when the following input is received do the following actions:
+•	1 shape_type param1 param2 – generates a new shape of the specified type (can be a number) with its constructor parameters:
+Ex: 1 0 1 1 1 10 5– generates a rectangle with pos(1,1,1) , length 10, width 5 and and inserts it in list
+•	2 shape_type – removes one shape with the specified type from the list
+•	3 – resize all shapes from the list (+10% - call Grow func)
+•	4 – shrinks all shapes from the list( -10% - call Shrink func)
+•	5 – move all shapes randomly on one axis and calls PrintInfo on all shapes
+•	6 shape_type – display the areas of all shapes of that type
+•	7 – prints all class members for all shapes
