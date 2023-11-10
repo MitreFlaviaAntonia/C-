@@ -1,3 +1,15 @@
+/*1.	Create an Array class that does the following operations:
+-	Size – returns the current size of the array
+-	Empty – returns true of the size is 0
+-	Front – returns the first element from the list
+-	Back – returns the last element from the list
+-	Reverse – reverses the list, the first element becomes the last, the second, becomes the second last… 
+-	At – returns the element from the specified position
+-	Operator [] – the same as at
+-	Swap(Array& arr) – swaps the elements from arr with the elements from the current class
+*/
+
+
 #include <cstdlib>
 #include <iostream>
 using namespace std;
