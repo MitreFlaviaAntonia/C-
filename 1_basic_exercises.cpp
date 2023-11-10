@@ -24,7 +24,7 @@ void ex4() {
 	cout << "The hypo is: " << hypotenuse << endl;
 }
 
-//Read an integer and display “even” if its divisible by 2 or “odd” if not.
+//Read an integer and display â€œevenâ€ if its divisible by 2 or â€œoddâ€ if not.
 void ex5() {
 
 	int var;
@@ -457,7 +457,7 @@ void ex18() {
 	}
 	// you can use bitset to check your result
 
-	// cout << “expected result: “ << bitset<16>(x) << endl;
+	// cout << â€œexpected result: â€œ << bitset<16>(x) << endl;
 
 }
 
@@ -551,7 +551,7 @@ void mulMat(int mat1[][C1], int mat2[][C2])
 	}
 }
 
-//Compute Matrix multiplication and display “Impossible” if the matrices cant be multiplied.
+//Compute Matrix multiplication and display â€œImpossibleâ€ if the matrices cant be multiplied.
 void ex21() {
 
 	// R1 = 4, C1 = 4 and R2 = 4, C2 = 4 (Update these
@@ -584,9 +584,3 @@ int main() {
 	ex21();
 	return 0;
 }
-
-
-
-//clasa de baza abstracta care sa aiba o fct virtuala pura
-
-//caut formatting numbers 23
