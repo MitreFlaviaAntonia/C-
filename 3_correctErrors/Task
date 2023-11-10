@@ -1,0 +1,57 @@
+3.	Correct the following code:
+class Student
+{
+	bool myIsMale;
+	char* myName;
+	int myAge;
+	char* myAddress;
+	vector<int> myGrades;
+
+	Student(bool isMale, char* name, int age, char* address)
+		: myIsMale(isMale)
+		, myName(name)
+		, myAge(age)
+		, myAddress(address)
+	{
+
+	}
+
+	void PrintInfo()
+	{
+		cout << "Name: " << myName << "\nAge: " << myAge << "\nAddress: " << myAddress << endl;
+		cout << "Grades: ";
+		for (int i = 0; i < 10; ++i)
+		{
+			cout << myGrades[i] << " ";
+		}
+		cout << endl;
+	}
+
+	void AddGrade(int grade) { myGrades.push_back(grade); }
+};
+
+class School
+{
+	vector<Student> myStudents;
+	string myAddress;
+
+	void EnrollStudent(const Student stud) { myStudents.push_back(stud); }
+	void GradeStudent(const Student& stud) { stud.AddGrade(); }
+
+	void ExpellStudent(const Student& stud) {
+		std::remove_if(myStudents.begin(), myStudents.end(), [stud](Student s) { return &s == &stud; });
+
+};
+
+int main()
+{
+	Student* st = new Student(true, "Max", 21, "Ubisoft");
+	Student* st2 = new Student(false, "Mia", 20, "Ubisoft");
+
+	School* sc = new School();
+	sc->EnrollStudent(*st);
+	sc->EnrollStudent(*st2);
+	sc->ExpellStudent(st);
+
+	return 0;
+}
